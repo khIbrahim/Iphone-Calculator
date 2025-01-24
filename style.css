@@ -114,7 +114,7 @@ button:hover {
     color: white;
 }
 
-.ac, .pourcent, .pm {
+.ac, .percent, .pm {
     background-color: #a5a5a5;
     color: black;
 }
@@ -127,4 +127,43 @@ button:hover {
     position: absolute;
     bottom: 10px;
     left: calc(50% - 65px);
+}
+
+.dynamic-island {
+    height: 15px;
+    width: 120px;
+    background: linear-gradient(135deg, #444444, #333333);
+    border-radius: 10px;
+    position: absolute;
+    top: 15px;
+    left: calc(50% - 65px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 2s infinite;
+}
+
+.dynamic-island:before {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 40px;
+    background: #ffffff;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
 }

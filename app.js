@@ -87,6 +87,8 @@ function operate(storedValue, operation, value) {
             return storedValue * value;
         case "/":
             return storedValue / value;
+        case "%":
+            return storedValue / 100
         default:
             return value;
     }
