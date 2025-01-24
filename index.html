@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        >
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Calculatrice</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="iphone-header">
+                <i class="heure" style="color: white"></i>
+                <div class="icons">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-full"></i>
+                </div>
+            </div>
+
+            <div class="result">
+                <span>0</span>
+            </div>
+            <div class="buttons">
+                <button class="ac"       aria-label="Effacer le tout">AC</button>
+                <button class="pm"       aria-label="Inverser le signe">±</button>
+                <button class="pourcent" aria-label="Pourcentage">%</button>
+                <button class="operator" data-operator="/">÷</button>
+                <button class="number"   data-value="7">7</button>
+                <button class="number"   data-value="8">8</button>
+                <button class="number"   data-value="9">9</button>
+                <button class="operator" data-operator="*">x</button>
+                <button class="number"   data-value="4">4</button>
+                <button class="number"   data-value="5">5</button>
+                <button class="number"   data-value="6">6</button>
+                <button class="operator" data-operator="-">-</button>
+                <button class="number"   data-value="1">1</button>
+                <button class="number"   data-value="2">2</button>
+                <button class="number"   data-value="3">3</button>
+                <button class="operator" data-operator="+">+</button>
+                <button class="number zero" data-value="0">0</button>
+                <button class="number virgule" data-value=".">,</button>
+                <button class="operator" data-operator="=">=</button>
+            </div>
+
+            <div class="bottom"></div>
+
+        </div>
+
+        <script src="app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha384-"></script>
+    </body>
+</html>
