@@ -22,6 +22,7 @@ const acButton = document.querySelector(".ac");
 document.addEventListener('click', function (event) {
     const numberButton = event.target.closest(".number");
     const operatorButton = event.target.closest(".operator");
+    const pmButton = event.target.closest(".pm")
 
     document.querySelectorAll(".operator").forEach((btn) => {
         btn.style.backgroundColor = "darkorange";
@@ -35,10 +36,12 @@ document.addEventListener('click', function (event) {
         reset = false;
         resultSpan.textContent = current;
         acButton.textContent = "AC";
-        return;
-    }
-
-    if (numberButton) {
+    } else if (pmButton) {
+        if(current !== "0"){
+            current = (parseFloat(current) * -1).toString()
+            resultSpan.textContent = current
+        }
+    }else if (numberButton) {
         const number = numberButton.getAttribute("data-value");
 
         if (number !== "." && (current === "0" || reset)) {
